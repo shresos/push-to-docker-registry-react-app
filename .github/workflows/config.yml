@@ -12,11 +12,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Use Node.js for build test
-        uses: actions/setup@v3
+        uses: actions/setup-node@v3
       - run: npm ci
       - run: npm run build
 
   Docker-Build-and-Push-DockerRegistry:
+    needs: App-Build
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout
