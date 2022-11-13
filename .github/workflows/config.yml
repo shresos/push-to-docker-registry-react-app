@@ -30,5 +30,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+          logout: true
       - name: Push to registry
         run: docker push oshan9/react-app:latest
