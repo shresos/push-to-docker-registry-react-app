@@ -16,7 +16,7 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-  Docker Build and Push to Docker Registry:
+  Docker-Build-and-Push-DockerRegistry:
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout
